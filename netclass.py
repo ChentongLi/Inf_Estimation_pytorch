@@ -76,7 +76,7 @@ for epoch in range(epochs):
     print('epoch:',epoch,'loss:',loss.item())
     loss_record[epoch] = loss.item()
     if epoch > 1399 and epoch % 100 == 0:
-        torch.save(model.state_dict(), 'model_2Sparams.pkl')
+        torch.save(model.state_dict(), 'model_paramsS.pkl')
 
 np.savetxt("loss.txt", loss_record)
 # model.load_state_dict(torch.load('model_paramsS.pkl'))
